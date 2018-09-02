@@ -1,0 +1,313 @@
+body {
+    background: #fafafa;
+    color: #0c3f43;
+    font-family: 'Source Serif Pro', serif;
+}
+
+.mobile-show {
+    display: none;
+}
+
+/* Text */
+h1, h2, h3,
+h4, h5, h6 {
+    margin: 20px 0;
+}
+
+h1, h2, h3 {
+    display: inline-block;
+    line-height: 90%;
+    border-bottom: 1px solid #c64191;
+}
+
+.medium {
+    font-size: 1.2em;
+}
+
+.large {
+    font-size: 1.35em;
+}
+
+.pacifico {
+    font-family: 'Pacifico', sans-serif;
+}
+
+
+/* Links */
+a {
+	display: inline-block;
+	position: relative;
+	color: #c64191;
+	text-decoration: none;
+}
+	
+a::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	display: inline-block;
+	height: 1em;
+	width: 100%;
+	border-bottom: 7px solid #f5f490;
+	opacity: 0.5;
+	margin-top: 7px;
+	z-index: -1;
+}
+
+a:hover {
+	color: #890b76;
+	text-decoration: none;
+}
+	
+a:hover::after	{
+	border-bottom: 7px solid #f5dc90;
+}
+	
+a.no-border-link::after,
+a.no-border-link:hover::after {
+    border: 0;
+}
+
+
+/* Forms */
+input,
+select,
+textarea {
+    border-radius: 4px;
+    border: 2px solid #1a5e63;
+    padding: 2px 4px;
+    background-color: white;
+}
+  
+input:hover,
+select:hover,
+textarea:hover {
+    border-color: #028090;
+}
+
+select:hover {
+    background-image: url('img/select-bg-hover.png');
+}
+  
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #c64191;
+    outline: none;
+}
+    
+label {
+    font-weight: 300;
+}
+  
+select,
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="url"] {
+    -webkit-appearance: none;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 400px;
+    font-weight: 300;
+}
+
+select {
+    background-image: url('img/select-bg.png');
+    background-repeat: no-repeat;
+    background-position: right 6px center;
+}
+    
+input[type="checkbox"],
+input[type="radio"] {
+    -webkit-appearance: none;
+    background-color: white;
+    vertical-align: text-bottom;
+    margin-right: 4px;
+    border: 2px solid #1a5e63;
+    padding: 9px;
+    position: relative;
+    outline: none !important;
+}
+  
+input[type="checkbox"] {
+    border-radius: 3px;
+}
+  
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+    border-color: #c64191;
+}
+  
+input[type="checkbox"]:checked:after {
+    content: '\2714';
+    font-size: 24px;
+    position: absolute;
+    top: -6px;
+    left: 2px;
+    color: #1a5e63;
+}
+  
+input[type="radio"] {
+    border-radius: 12px;
+}
+  
+input[type="radio"]:checked:after {
+    content: ' ';
+    width: 12px;
+    height: 12px;
+    border-radius: 50px;
+    position: absolute;
+    top: 3px;
+    background: #1a5e63;
+    left: 3px;
+    font-size: 32px;
+}
+
+/* Nav */
+.navbar.propeller-navbar {
+    padding: 10px 0;
+}
+
+.navbar-brand-image {
+    height: 60px;
+    margin-top: 10px;
+}
+
+.navbar-brand-image:hover {
+    opacity: 0.8;
+}
+
+
+/* Main */
+.prefill-search-select {
+    margin-left: 5px;
+}
+
+.advanced-search-link {
+    float: right;
+}
+
+.prefill-search-container {
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.airtable-container {
+    margin: 20px auto;
+}
+
+.about-founders {
+    font-size: 1.1em;
+    text-align: right;
+}
+
+.midwest-investors,
+.liberal-arts-investors,
+.ex-googlers,
+.consumer-thesis,
+.associates-principals {
+    display: none;
+}
+
+
+/* Advanced Search */
+.instructions-number {
+    background: #c64191;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.search-instructions-1 {
+    width: 200px;
+    margin-left: 6px;
+    max-width: 100%;
+}
+
+.search-instructions-2 {
+    width: 300px;
+    margin-top: -5px;
+    margin-bottom: 5px;
+    max-width: 100%;
+}
+
+.search-instructions-3 {
+    width: 300px;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    max-width: 100%;
+}
+
+
+/* About */
+.about-image {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #e7e7e7;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* Responsive */
+@media screen and (max-width: 1000px) {
+    .prefill-search-select {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        font-size: 0.9em;
+    }
+    
+    .prefill-search-select {
+        width: 230px;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+    
+    .search-instructions-2,
+    .search-instructions-3 {
+        margin-top: 10px;
+    }
+    
+    .instructions-number {
+        top: 5px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .advanced-search-link {
+        float: none;
+    }
+    
+    .about-founders {
+        text-align: left;
+    }
+
+    .mobile-hide {
+        display: none;
+    }
+    
+    .mobile-show {
+        display: block;
+    }
+}  
+
+.footer-logo {
+    width: 80px;
+    margin-left: 5px;
+}

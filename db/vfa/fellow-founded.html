@@ -1,0 +1,98 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <title>Propeller: A curated database of early-stage startup investors.</title>
+
+    <meta name="description" content="A curated database of early-stage startup investors">
+    
+    <meta name="google-site-verification" content="MfRAIlO0I0gZsSUb5qe_NaaAByVUmm5hAPf8bF_Xxhg" />
+
+  
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Source+Serif+Pro" rel="stylesheet">
+
+    <link rel="stylesheet" href="propeller.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg propeller-navbar">
+            <a class="navbar-brand no-border-link" href="#"><img src="img/vfa.png" alt="Propeller" class="navbar-brand-image"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!--
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul> -->
+            </div><!--navbar-collapse-->
+        </nav>
+    </div><!--container-->
+    
+    <script type="text/javascript">
+    $( document ).ready(function() {
+        $(".prefill-search-select").change( function() {
+            if ($(this).val() === "advanced-search") {
+                window.location.href = "advanced-search";
+                };
+            $('.airtable-container').hide();
+            $('.' + $(this).val()).show();
+        });
+    });
+    </script>
+    
+    <div class="container prefill-search-container">
+        <div class="row">
+            <div class="col-sm-8">
+                Now showing
+                <select class="prefill-search-select">
+                    <option value="pre-seed-vcs">VFA-affiliated VCs</option>
+                    <option value="midwest-investors">VFA-affiliated angels</option>
+                    <option selected value="liberal-arts-investors">Fellow-founded companies</option>
+                    <option value="advanced-search">advanced search...</option>
+                </select>
+            </div><!--col-->
+        </div><!--row-->
+    </div><!--container-->
+    
+    <div class="container airtable-container pre-seed-vcs" style="display: none;">
+        <iframe class="airtable-embed" src="https://airtable.com/embed/shrV69PCYIs8zAJht?backgroundColor=green&viewControls=on" frameborder="0" width="100%" height="633"></iframe>
+    </div><!--container pre-seed-vcs-->
+    
+    <div class="container airtable-container midwest-investors">
+        <iframe class="airtable-embed" src="https://airtable.com/embed/shr3fJiyzHgxg9rtV?backgroundColor=green&viewControls=on" frameborder="0" width="100%" height="633"></iframe>
+    </div><!--container midwest-investors-->
+    
+    <div class="container airtable-container liberal-arts-investors" style="display: block;">
+        <iframe class="airtable-embed" src="https://airtable.com/embed/shrkm3yBlk16zugUW?backgroundColor=red&viewControls=on" frameborder="0" width="100%" height="633"></iframe>
+    </div><!--container midwest-investors-->
+    
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6"></div>
+            <div class="col-sm-6">
+                <p class="about-founders">Powered by <img src="img/logotype.png" class="footer-logo"></p>
+            </div><!--col-->
+        </div><!--row-->
+    </div><!--container-->
+    
+</body>
+</html>
